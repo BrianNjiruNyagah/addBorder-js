@@ -1,0 +1,16 @@
+function addBorder(picture) {
+  //variable which will be used in enclosing the top and bottom of the padded array 
+  var str = "";
+ 
+  //loop that pads the word in the array
+  for(var i = 0;i<picture.length;i++){
+   picture[i] = picture[i].padStart(picture[i].length+1,'*');
+   picture[i] = picture[i].padEnd(picture[i].length+1,'*');               
+  }
+  //enclosing of the array
+   str = str.padStart(picture[0].length,'*');
+   picture.unshift(str);
+   picture.push(str);
+ 
+   return picture;
+}
